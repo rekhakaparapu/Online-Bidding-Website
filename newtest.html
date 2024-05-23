@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Item Details</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        margin: 0;
+        padding: 0;
+      }
+
+      #navbar {
+        height: 70px;
+        width: 119rem;
+        border: 1px solid transparent;
+        background-color: rgb(94, 30, 94);
+        font-size: 27px;
+        color: white;
+        /* position: fixed; */
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+      }
+      .nav_links {
+        text-decoration: none;
+        color: white;
+        margin-left: 30px;
+        display: inline-block;
+        cursor: pointer;
+        padding: 20px 10px;
+        transition: background-color 0.3s, transform 0.5s;
+      }
+      .nav_div {
+        margin-left: 700px;
+      }
+      #Auctions_link {
+        background-color: white;
+        color: black;
+        height: auto;
+        width: 110px;
+        border-radius: 20px;
+        border: transparent;
+        font-weight: bold;
+        transform: scale(0.8);
+      }
+      #Auctions_link:hover {
+        background-color: violet;
+        color: black;
+        border: transparent;
+        border-radius: 20px;
+        transform: scale(0.9);
+      }
+      .nav_links:hover {
+      transform: scale(1.2);
+      color:black;
+    }
+      #logo {
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        margin: 6px 10px;
+      }
+      .title {
+        margin-top: 15px;
+        margin-left: -20px;
+        color: white;
+      }
+      #h_1 {
+        color: purple;
+        margin-left: 50px;
+      }
+      #itemDetails,
+      #biddingSection {
+        display: inline-block;
+        vertical-align: top;
+        background-color: white;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      #itemDetails {
+        width: 25%;
+        justify-content: center;
+        align-items: center;
+      }
+      #itemDetails h2 {
+        color: purple;
+        text-align: center;
+      }
+      #itemDetails img {
+        width: 40%;
+        border-radius: 10px;
+        align-items: center;
+        justify-content: center;
+        margin-left: 150px;
+      }
+      #itemDetails p {
+        margin-left: 100px;
+      }
+      #biddingSection {
+        width: 20%;
+        background-color: rgb(220, 220, 255);
+        color: rgb(110, 16, 110);
+        margin-left: 300px;
+        /* margin-top: -30px; */
+      }
+
+      #biddingForm {
+        display: flex;
+        flex-direction: column;
+      }
+
+      #biddingForm input,
+      #biddingForm button {
+        margin: 10px 0;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+
+      #biddingForm button {
+        background-color: green;
+        color: white;
+        border: none;
+      }
+
+      #biddingForm button:hover {
+        background-color: rgb(20, 83, 20);
+      }
+
+      #timer {
+        margin-top: 10px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav id="navbar">
+        <img src="./images/bid.jpg" alt="logo" id="logo" />
+        <h1 class="title">BIDding</h1>
+        <div class="nav_div">
+          <a href="./index.html" class="nav_links">Home</a>
+          <a href="./index.html#Auctions" class="nav_links" id="Auctions_link"
+            >Auctions</a
+          >
+          <a href="./testimonials.html" class="nav_links">Testimonials</a>
+          <a href="./howtoplay.html" class="nav_links">How to play</a>
+          <a href="./login.html" class="nav_links">Login</a>
+        </div>
+      </nav>
+    </header>
+    <h1 id="h_1">Item Details</h1>
+    <div id="itemDetails"></div>
+    <div id="biddingSection"></div>
+
+    <script>
+      window.onload = function () {
+        // Get the itemId from the URL query parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const itemId = urlParams.get("itemId");
+
+        // Use itemId to fetch and display item details
+        fetchItemDetails(itemId);
+      };
+
+      function fetchItemDetails(itemId) {
+        // Dummy product data (replace with actual product data)
+        const products = [
+          {
+            id: 1,
+            name: "Luxurious vintage car",
+            description:
+              "A luxurious vintage black car manufactured in the year 1890.",
+            startTime: "Apr 18th 2024 11:00 AM",
+            endTime: "Apr 18th 2024 1:00 PM",
+            price: 250000,
+            image: "./images/blackcar.webp",
+          },
+          {
+            id: 2,
+            name: "Italian flowervose",
+            description: "A white flowervose used by French royal families.",
+            startTime: "Apr 17th 2024 11:00 AM",
+            endTime: "Apr 17th 2024 1:00 PM",
+            price: 5000,
+            image: "./images/pot.jpg",
+          },
+          {
+            id: 3,
+            name: "Royal Enfield Bike",
+            description: "High speed royal bike of Royal kings in London.",
+            startTime: "Apr 17th 2024 11:00 AM",
+            endTime: "Apr 17th 2024 1:00 PM",
+            price: 80000,
+            image: "./images/bike1.jpeg",
+          },
+          {
+            id: 4,
+            name: "Brown Car",
+            description: "An old ambassador car of light brown color.",
+            startTime: "Apr 17th 2024 11:00 AM",
+            endTime: "Apr 17th 2024 1:00 PM",
+            price: 155000,
+            image: "./images/car3.jpg",
+          },
+          {
+            id: 5,
+            name: "Royal old Bicycle",
+            description: "A royal old Bicycle manufactured in the year 1899.",
+            startTime: "Apr 27th 2024 11:00 AM",
+            endTime: "Apr 27th 2024 1:00 PM",
+            price: 5000,
+            image: "./images/bicycle3.jpg",
+          },
+          {
+            id: 6,
+            name: "Couple watch",
+            description: "Couple watches in gold and silver colours.",
+            startTime: "Apr 30th 2024 11:00 AM",
+            endTime: "Apr 30th 2024 1:00 PM",
+            price: 4000,
+            image: "./images/dualwatch.jpg",
+          },
+          {
+            id: 7,
+            name: "Old golden Gramphone",
+            description: "An old gramophone with gold color finishing.",
+            startTime: "April 23rd 2024 11:00 AM",
+            endTime: "April 23rd 2024 1:00 PM",
+            price: 80000,
+            image: "./images/gramphone.jpeg",
+          },
+          {
+            id: 8,
+            name: "Golden Horse Toy",
+            description: "An old golden horse toy of children.",
+            startTime: "May 7th 2024 11:00 AM",
+            endTime: "May 7th 2024 1:00 PM",
+            price: 25000,
+            image: "./images/horse.jpg",
+          },
+          {
+            id: 9,
+            name: "A purple bicycle",
+            description: "Bicycle in purple color with metal finishing.",
+            startTime: "May 5th 2024 11:00 AM",
+            endTime: "May 5th 2024 1:00 PM",
+            price: 12000,
+            image: "./images/bicycle1.avif",
+          },
+          {
+            id: 10,
+            name: "An old Blue car",
+            description: "An old Blue car used by Royal family in India.",
+            startTime: "May 1st 2024 11:00 AM",
+            endTime: "May 1st 2024 1:00 PM",
+            price: 100000,
+            image: "./images/bluecar.webp",
+          },
+          {
+            id: 11,
+            name: "Photo frame",
+            description: "Photo frame with gold finishing.",
+            startTime: "May 1st 2024 11:00 AM",
+            endTime: "May 1st 2024 1:00 PM",
+            price: 20000,
+            image: "./images/frame.avif",
+          },
+          {
+            id: 12,
+            name: "Tealight Holder",
+            description: "Tea light holder used by ancient Egyptians.",
+            startTime: "May 5th 2024 11:00 AM",
+            endTime: "May 5th 2024 1:00 PM",
+            price: 15499,
+            image: "./images/tealightholder.jpeg",
+          },
+        ];
+
+        // Find the product with the given itemId
+        const product = products.find((product) => product.id == itemId);
+
+        // Display product details
+        displayProductDetails(product);
+
+        // Set up bidding section
+        setupBiddingSection(product);
+      }
+
+      // Function to display product details
+      function displayProductDetails(product) {
+        const itemDetailsContainer = document.getElementById("itemDetails");
+        itemDetailsContainer.innerHTML = `
+                <h2>${product.name}</h2>
+                <img src="${product.image}" alt="${product.name}">
+                <p>Description: ${product.description}</p>
+                <p>Start Time: ${product.startTime}</p>
+                <p>End Time: ${product.endTime}</p>
+                <p>Current Price: $<span id="currentPrice">${product.price}</span></p>
+            `;
+      }
+
+      // Function to set up bidding section
+      function setupBiddingSection(product) {
+        const biddingSection = document.getElementById("biddingSection");
+        const currentPrice = product.price;
+        let bidCount = 0;
+
+        // Bidding form
+        biddingSection.innerHTML = `
+                <h2>Bidding</h2>
+                <form id="biddingForm">
+                    <p>Enter your name:</p>
+                    <input type="text" id="userName" required>
+                    <p>Enter your bid:</p>
+                    <input type="number" id="bidAmount" min="${
+                      currentPrice + 1
+                    }" required>
+                    <button type="button" id="placeBidBtn" onclick="placeBid(${
+                      product.id
+                    }, ${currentPrice})">Place Bid</button>
+                </form>
+                <p id="timer"></p>`;
+
+        let timer;
+
+        // Timer for bidding process
+        const startTimer = () => {
+          let timeLeft = 30;
+          const timerElement = document.getElementById("timer");
+          timer = setInterval(() => {
+            timerElement.textContent = `Time left: ${timeLeft} seconds`;
+
+            if (timeLeft <= 0 || bidCount === 3) {
+              clearInterval(timer);
+              // End of bidding process
+              endBidding(product);
+            }
+
+            timeLeft--;
+          }, 1000);
+        };
+
+        // Function to place a bid
+        window.placeBid = function (itemId, currentPrice) {
+          const userNameInput = document.getElementById("userName");
+          const bidAmountInput = document.getElementById("bidAmount");
+          const bidAmount = parseInt(bidAmountInput.value);
+          const userName = userNameInput.value.trim();
+
+          if (bidAmount > currentPrice && userName) {
+            bidCount++;
+
+            // Store the bid amount in local storage
+            let userBids =
+              JSON.parse(localStorage.getItem(`bids_${itemId}`)) || [];
+            userBids.push({ name: userName, amount: bidAmount });
+            localStorage.setItem(`bids_${itemId}`, JSON.stringify(userBids));
+
+            // Update the current price on the page
+            // document.getElementById('currentPrice').textContent = bidAmount;
+
+            // Notify user
+            alert("Bid placed successfully!");
+
+            // Start timer if first bid
+            if (bidCount === 1) {
+              startTimer();
+            }
+          } else {
+            alert(
+              "Bid amount must be greater than the current price and name must be provided."
+            );
+          }
+        };
+
+        // Function to end the bidding process
+        function endBidding(product) {
+          const userBids =
+            JSON.parse(localStorage.getItem(`bids_${product.id}`)) || [];
+          let highestBid = 0;
+          let winner = { name: "None", amount: 0 };
+
+          for (const userBid of userBids) {
+            if (userBid.amount > highestBid) {
+              highestBid = userBid.amount;
+              winner = userBid;
+            }
+          }
+
+          alert(
+            `Bidding has ended!\nThe winning bid is $${highestBid} placed by ${winner.name}.`
+          );
+          localStorage.setItem("winner", JSON.stringify(winner));
+          localStorage.setItem("product", JSON.stringify(product));
+
+          // Redirect to winners info page
+          // window.location.href = `winnersinfo.html?itemId=${product.id}`;
+          window.location.href = "winnersinfo.html";
+        }
+      }
+    </script>
+  </body>
+</html>

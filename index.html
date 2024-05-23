@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Auction website</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+</head>
+<body>
+<div class="main">
+<header>
+<nav id="navbar">
+ <img src="./images/bid.jpg" alt="logo" id="logo">
+<h1 class="title"> BIDding</h1>
+<div class="nav_div">
+    <a href="#home" class="nav_links">Home</a>
+<a href="#Auctions" class="nav_links" id="Auctions_link">Auctions</a>
+<a href="./testimonials.html" class="nav_links">Testiminials</a>
+<a href="./howtoplay.html" class="nav_links"> How to play</a>
+<a href="./login.html" class="nav_links">Login</a>
+</div>
+ </nav>  
+        
+</header>
+<div id="intro_page">
+<h1 id="h_1">India's Most Trusted Bidding Website</h1>
+<div class="bid_placed">
+    <h1>2.5M</h1>
+    <pre id="pre_1">MILLION+
+BIDS PLACED</pre>
+</div>
+<div id="dreems">
+
+<h1>3000</h1>
+<pre id="pre_2">DREAM
+DELIVERED</pre>
+</div>
+<div id="daily_count">
+    <h1>5</h1>
+    <pre id="pre_3"> 
+        AUCTIONS
+        DAILY</pre>
+</div>
+</div>
+ <div class="div_2">
+  <p class="para_1"> HOT DEALS FOR YOU</p>
+  <p class="para_4">India's most truseted bidding website.Exciting offers everyday.</p>
+  </p>
+  <img src="./images/bid2.jpg" alt="bid_img" id="bid_img">
+  <button class="btn_1"><a href="./index.html#Auctions" id="Get_startbtn">Get Started </a></button>
+ </div>
+
+<div class="winners_page" id="winners">
+
+</div>
+ 
+<div class="div_3" id="Auctions">
+    <h1 class="head1_2">Auctions</h1>
+    <p id="para3_1"> </p>
+   <!--"product_cards"-->
+    <div class="products_row_1">
+        <div class="item-card" id="item1" >
+            <img src="./images/blackcar.webp" alt="Item 1">
+             <div class="item-details">
+                <h2>Luxirious vintage car </h2>
+                <p>Description:A luxirious vintage black car.
+                    manufctured in the year 1890. </p>
+                <p>Start Time: <span id="startTime1"> Apr 18th 2024 11:00 AM</span></p>
+                <p>End Time: <span id="endTime1"> Apr 18th 2024 1:00 PM</span></p>
+                <p>Current Price: <span id="price1">Rs.250000</span></p>
+                <button onclick="redirectToBiddingPage(1)" class="startbidding_btn">Start bidding</button>
+            </div>
+        </div>
+        <div class="item-card" id="item2">
+            <img src="./images/pot.jpg" alt="Item 2">
+            <div class="item-details">
+                <h2>Italian flowervose</h2>
+                <p>Description: A white flowervose used by French royal families.</p>
+                <p>Start Time: <span id="startTime2"> Apr 17th 2024 11:00 AM</span></p>
+                <p>End Time: <span id="endTime2"> Apr 17th 2024 1:00 PM</span></p>
+                <p>Current Price: <span id="price2">Rs.5000</span></p>
+                <button onclick="redirectToBiddingPage(2)" class="startbidding_btn">Start bidding</button>
+            </div>
+        </div>
+        <div class="item-card" id="item3">
+            <img src="./images/bike1.jpeg" alt="Item 3">
+            <div class="item-details">
+                <h2>Royal Bike</h2>
+                <p>Description: High speed royal bike of Royal kings in London.</p>
+                <p>Start Time: <span id="startTime3">April 19th 2024 11:00 AM</span></p>
+                <p>End Time: <span id="endTime3"> April 19th 2024  1:00 PM</span></p>
+                <p>Current Price: <span id="price3">Rs.80000</span></p>
+                <button onclick="redirectToBiddingPage(3)" class="startbidding_btn">Start bidding</button>
+            </div>
+        </div>
+    </div>
+    <div class="products_row_2">
+        <div class="item-card" id="item4">
+            <img src="./images/car3.jpg" alt="Item 4">
+            <div class="item-details">
+                <h2>Brown Car</h2>
+                <p>Description: An old ambassoder car of light brown color.</p>
+                <p>Start Time: <span id="startTime4">Apr 17th 2024  11:00 AM</span></p>
+                <p>End Time: <span id="endTime4">Apr 17th 2024 1:00 PM</span></p>
+                <p>Current Price: <span id="price4">Rs.155000</span></p>
+                <button onclick="redirectToBiddingPage(4)" class="startbidding_btn">Start bidding</button>
+            </div>
+        </div>
+        <div class="item-card" id="item5">
+            <img src="./images/bicycle3.jpg" alt="Item 5">
+            <div class="item-details">
+                <h2> Royal old Bicycle</h2>
+                <p>Description: A royal old Bicycle manufactured in the year 1899.</p>
+                <p>Start Time: <span id="startTime5"> Apr 27th 2024 11:00 AM</span></p>
+                <p>End Time: <span id="endTime5"> Apr 27th 2024 1:00 PM</span></p>
+                <p>Current Price: <span id="price5">Rs.5000</span></p>
+                <button onclick="redirectToBiddingPage(5)" class="startbidding_btn">Start bidding</button>
+            </div>
+        </div>
+        <div class="item-card" id="item6">
+            <img src="./images/dualwatch.jpg" alt="Item 6">
+            <div class="item-details">
+                <h2>Couple watch</h2>
+                <p>Description:Couple watches in gold and silver colours.</p>
+                <p>Start Time: <span id="startTime6"> Apr 30th 2024 11:00 AM</span></p>
+                <p>End Time: <span id="endTime6"> Apr 30th 2024 1:00 PM</span></p>
+                <p>Current Price: <span id="price6">Rs.4000</span></p>
+                <button onclick="redirectToBiddingPage(6)" class="startbidding_btn">Start bidding</button>
+            </div>
+        </div>
+    </div>
+    <div class="products_row_3">
+        <div class="item-card" id="item7">
+            <img src="./images/gramphone.jpeg" alt="Item 7">
+            <div class="item-details">
+                <h2>Old golden Gramphone</h2>
+                <p>Description:An old gramphone with gold color finishing.</p>
+                <p>Start Time: <span id="startTime7"> April 23rd 2024 11:00 AM</span></p>
+                <p>End Time: <span id="endTime7"> April 23rd 2024 1:00 PM</span></p>
+                <p>Current Price: <span id="price7">Rs.80000</span></p>
+                <button onclick="redirectToBiddingPage(7)" class="startbidding_btn">Start bidding</button>
+            </div>
+        </div>
+        <div class="item-card" id="item8">
+            <img src="./images/horse.jpg" alt="Item 8">
+            <div class="item-details">
+                <h2>Golden Horse Toy</h2>
+                <p>Description:an old golden horse toy of children.</p>
+                <p>Start Time: <span id="startTime8"> May 7th 2024 11:00 AM</span></p>
+                <p>End Time: <span id="endTime8"> May 7th 2024 1:00 PM</span></p>
+                <p>Current Price: <span id="price8">Rs.25000</span></p>
+                <button onclick="redirectToBiddingPage(8)" class="startbidding_btn">Start bidding</button>
+            </div>
+        </div>
+        <div class="item-card" id="item9">
+            <img src="./images/bicycle1.avif" alt="Item 9">
+            <div class="item-details">
+                <h2>A purple bycycle</h2>
+                <p>Description:Bicycle in purple color with metal finishing.</p>
+                <p>Start Time: <span id="startTime9"> May 5th 2024 11:00 AM</span></p>
+                <p>End Time: <span id="endTime9">May 5th 2024 1:00 PM</span></p>
+                <p>Current Price: <span id="price9">Rs.12000</span></p>
+                <button onclick="redirectToBiddingPage(9)" class="startbidding_btn">Start bidding</button>
+            </div>
+        </div>
+    </div>
+    <div class="products_row_4">
+        <div class="item-card" id="item10">
+            <img src="./images/bluecar.webp" alt="Item 10">
+            <div class="item-details">
+                <h2>An old Blue car </h2>
+                <p>Description: An old Blue car used by Royal family in India.</p>
+                <p>Start Time: <span id="startTime10"> May 1st 2024 11:00 AM</span></p>
+                <p>End Time: <span id="endTime10"> May 1st 2024 1:00 PM</span></p>
+                <p>Current Price: <span id="price10">Rs.100000</span></p>
+                <button onclick="redirectToBiddingPage(10)" class="startbidding_btn">Start bidding</button>
+            </div>
+        </div>
+        <div class="item-card" id="item11">
+            <img src="./images/frame.avif" alt="Item 11">
+            <div class="item-details">
+                <h2>Photo frame</h2>
+                <p>Description: Photo frame with gold finishing.</p>
+                <p>Start Time: <span id="startTime11"> May 1st 2024 11:00 AM</span></p>
+                <p>End Time: <span id="endTime11"> May 1st 2024 1:00 PM</span></p>
+                <p>Current Price: <span id="price11">Rs.20000</span></p>
+                <button onclick="redirectToBiddingPage(11)" class="startbidding_btn">Start bidding</button>
+            </div>
+        </div>
+        <div class="item-card" id="item12">
+            <img src="./images/tealightholder.jpeg" alt="Item 12">
+            <div class="item-details">
+                <h2>Tealight Holder</h2>
+                <p>Description: Tea light holder used by ancient Egyptians.</p>
+                <p>Start Time: <span id="startTime12"> May 5th 2024 11:00 AM</span></p>
+                <p>End Time: <span id="endTime12"> May 5th 2024 1:00 PM</span></p>
+                <p>Current Price: <span id="price12">Rs.15499</p>
+                <button onclick="redirectToBiddingPage(12)" class="startbidding_btn">Start bidding</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+   <div class="contact_info">
+       <a href="phoneto:8247688116" class="contact_links ">Phone:  +1234-567-789</a>
+       <a href="mailto:chandrarekhakaparapu@gmail.com" class="contact_links "> Mail: bidding@gmail.com</a>
+       <a href="www.instagram.com" class="contact_links">  instagram </a>
+       <a href="www.twitter.com" class="contact_links"> Twitter</a>
+       <a href="www.facebook.com" class="contact_links" >facebook</a>
+       <p> "Bid, Win, Enjoy - Your next treasure awaits!"</p>
+   
+    </div>
+</footer>
+
+<script>
+function redirectToBiddingPage(itemId) {
+  // Redirect to another page and pass the item ID as a query parameter
+//   window.location.href = `./item_details.html?itemId=${itemId}`;
+// window.location.href = "bidding_page.html";
+window.location.href = `./newtest.html?itemId=${itemId}`;
+}
+
+</script>
+
+</body>
+</html>

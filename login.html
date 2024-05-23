@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>user registration</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .main {
+        height: 98vh;
+        width: 118rem;
+        border: 1px solid black;
+      }
+      #navbar {
+  height: 70px;
+  width: 118rem;
+  border: 1px solid transparent;
+  background-color: rgb(94, 30, 94);
+  font-size: 27px;
+  color: white;
+  /* position: fixed; */
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+.nav_links {
+  text-decoration: none;
+  color: white;
+  margin-left: 30px;
+  display:inline-block;
+  cursor: pointer;
+  padding: 20px 10px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+.nav_div{
+  margin-left: 700px;
+}
+#Auctions_link{
+  background-color:white;
+  color: black;
+  height: auto;
+  width: 100px;
+  border-radius: 20px;
+  border:transparent;
+  font-weight: bold;
+  transform: scale(0.8);
+}
+#Auctions_link:hover{
+  background-color:violet;
+  color: black;
+  border: transparent;
+  border-radius: 20px;
+  transform: scale(0.9);
+}
+.nav_links:hover {
+  transform: scale(1.2);
+  color:black;
+}
+#logo {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  margin: 6px 10px;
+}
+.title {
+  margin-top: 15px;
+  margin-left:-20px;
+  color: white;
+}
+      .form_container {
+        height: 550px;
+        width: 500px;
+        border-radius: 20px;
+        border: 1px solid black;
+        color: #f5f1f5;
+        /* background-image:url() ; */
+        text-align: center;
+        margin-left: 700px;
+        margin-top: 100px;
+        box-shadow: 20px 20px 20px rgba(8, 7, 7, 0.979);
+        background-color: rgb(83, 25, 83);
+      }
+      form {
+        align-items: center;
+      }
+      input {
+        height: 35px;
+        width: 250px;
+        border-radius: 17px;
+        font-size: 15px;
+        text-align: center;
+      }
+      #submit {
+        height: 40px;
+        width: 90px;
+        border-radius: 10px;
+        font-size: 20px;
+        margin-top: 10px;
+      }
+      #submit:hover {
+        background-color: green;
+        color: white;
+        border: transparent;
+      }
+      input:hover {
+        /* background-color:; */
+        border: transparent;
+        font-size: 20px;
+        color: whitesmoke;
+        border-radius: 20px;
+        height: 40px;
+      }
+      #signup_btn {
+        text-decoration: none;
+        font-size: 20px;
+        margin-top: 40px;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <header>
+        <nav id="navbar">
+          <img src="./images/bid.jpg" alt="logo" id="logo" />
+          <h1 class="title">BIDding</h1>
+          <div class="nav_div">
+            <a href="./index.html" class="nav_links">Home</a>
+          <a href="./index.html#Auctions" class="nav_links" id="Auctions_link">Auctions</a>
+          <a href="./testimonials.html" class="nav_links">Testiminials</a>
+          <a href="./howtoplay.html" class="nav_links"> How to play</a>
+          <a href="#login" class="nav_links">Login</a>
+          </div>
+        </nav>
+      </header>
+      <div class="form_container">
+        <h1>Login form</h1>
+        <form action="" id="login-form">
+          <label for="username"></label><br />
+          <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="Username"
+          /><br /><br />
+          <label for="mail"></label><br />
+          <input
+            type="mail"
+            name="mail"
+            id="mail"
+            placeholder="Email"
+            required
+          /><br /><br />
+          <label for="password"></label><br />
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Password"
+            required
+          /><br /><br />
+          <input type="submit" value="Login" id="submit" />
+        </form>
+        <a href="./signup2.html" id="signup_btn"> Create an Account</a>
+      </div>
+    </div>
+    <!-- <script>
+      document.getElementById("");
+    </script> -->
+  </body>
+</html>
